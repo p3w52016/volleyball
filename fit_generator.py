@@ -32,9 +32,9 @@ class DataGenerator(object):
         y = np.empty((size), dtype=int)
 
         for i, ID in enumerate(sub_ID):
-            x[i] = pk.load(open('/free1/p3w52016/volleyball_dataset/pkl/conf.3_20P_pkl/%d_x.pkl' % i, 'rb'))
-            y[i] = pk.load(open('/free1/p3w52016/volleyball_dataset/pkl/conf.3_20P_pkl/%d_y.pkl' % i, 'rb'))
-            cnn[i] = pk.load(open('/free1/p3w52016/volleyball_dataset/img_feature/299_299/dense_%d.pkl' % i, 'rb'))
+            x[i] = pk.load(open('/free1/p3w52016/volleyball_dataset/pkl/conf.3_20P_pkl/%d_x.pkl' % ID, 'rb'))
+            y[i] = pk.load(open('/free1/p3w52016/volleyball_dataset/pkl/conf.3_20P_pkl/%d_y.pkl' % ID, 'rb'))
+            cnn[i] = pk.load(open('/free1/p3w52016/volleyball_dataset/img_feature/299_299/dense_%d.pkl' % ID, 'rb'))
 
         return x, y, cnn
 
